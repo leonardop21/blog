@@ -62,3 +62,16 @@ Follow me on Twitter @maridlcrmn
         transform: translate(0px,0px);
     }
 }
+
+body {background: #4b2f19;}
+  .img-leo {width: 500px;}
+
+  h4{color: #fff !important;}
+
+@media screen and (max-width: 700px) {
+  .img-leo {width: 200px;}
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .img-leo {width: 350px;}
+}
