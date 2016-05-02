@@ -15,4 +15,7 @@ Route::get('/', function () {
     return view('inicio');
 });
 
-Route::get('/blog', 'BlogController@index');
+Route::get('/blog', 'PostsController@blog');
+Route::get('/blog/leo', 'PostsController@index');
+Route::get('/blog/duda', 'PostsController@duda');
+Route::get('/relaxe','PostsController@relaxe');
