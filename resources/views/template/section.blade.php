@@ -19,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/blog/public">
+          <a class="navbar-brand" href="/laravel/blog/public">
           <img src="{{asset('img/leo.png')}}">
           </a>
         </div>
