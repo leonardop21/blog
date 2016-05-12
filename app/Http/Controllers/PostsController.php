@@ -9,6 +9,7 @@ use Blog\Http\Controllers\Controller;
 use Blog\Post;
 use Blog\blog;
 use Blog\relaxe;
+use Blog\animal;
 
 class PostsController extends Controller
 {
@@ -28,7 +29,14 @@ class PostsController extends Controller
     }
 
     public function relaxe() {
-        $relaxes = \Blog\Relaxe::all();
+        $relaxes = \Blog\relaxe::all();
         return view('posts.relaxe', compact('relaxes'));
     }
+
+        public function animal() {
+        $animals = \Blog\animal::all();
+        return view('animal.animal', compact('animals'));
+    }
+
+
 }

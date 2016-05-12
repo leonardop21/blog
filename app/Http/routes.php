@@ -19,3 +19,4 @@ Route::get('/blog', 'PostsController@blog');
 Route::get('/blog/leo', 'PostsController@index');
 Route::get('/blog/duda', 'PostsController@duda');
 Route::get('/relaxe','PostsController@relaxe');
+Route::get('/blog/animal','PostsController@animal');
