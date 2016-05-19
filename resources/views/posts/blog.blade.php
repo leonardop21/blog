@@ -12,10 +12,10 @@
 				</a>
 				<h5>{{ $blog->content }}</h5>
 				<a href="{{ $blog->link }}" target="_blank" class="btn btn-danger">Leia Mais</a>
-				@foreach($blog->comment as $comment)
-				<p><b>Nome:</b> {{ $comment->name }}</br/></p>
-				<p><b>Comment:</b> {{ $comment->comment }}</br/></p>
-				@endforeach
+					@foreach($blog->comment as $comment)
+					<p><b>Nome:</b> {{ $comment->name }}</br/></p>
+					<p><b>Comment:</b> {{ $comment->comment }}</br/></p>
+					@endforeach
 			</div>
 		@endforeach
 	</div>
