@@ -10,6 +10,7 @@ use Blog\Post;
 use Blog\blog;
 use Blog\relaxe;
 use Blog\animal;
+use Blog\leonan;
 
 class PostsController extends Controller
 {
@@ -36,6 +37,11 @@ class PostsController extends Controller
         public function animal() {
         $animals = \Blog\animal::all();
         return view('animal.animal', compact('animals'));
+    }
+
+    public function leonan() {
+        $leonans = \Blog\leonan::all();
+        return view('leonan.leonan', compact($leonans));
     }
 
 

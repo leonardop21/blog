@@ -1,19 +1,23 @@
 @extends('template.section')
 @section('title') Últimas Notícias @stop
 @section('content') 
-
 <div class="text-center"><h1>Últimas Notícias</h1></div>
 <div class="container">
 	<div class="row">
-	<?php foreach ($blogs as $blog): ?>
+	@foreach($blogs as $blog)
 			<div class="col-md-6">
-				<h3><?php echo $blog['title']; ?></h3>
-				<p><img class="img-responsive" src="<?php echo $blog['img']; ?>" width="350" height="300"></p>
-				<h5><?php echo $blog['content']; ?></h5>
-				<a href="<?php echo $blog['link']; ?>" target="_blank" class="btn btn-danger">Leia Mais</a>
+				<h3>{{ $blog->title }}</h3>
+				<p><a href="{{ $blog->img }}" target="_blank">
+					<img class="img-responsive" src="{{ $blog->img }}" width="350" height="300"></p>
+				</a>
+				<h5>{{ $blog->content }}</h5>
+				<a href="{{ $blog->link }}" target="_blank" class="btn btn-danger">Leia Mais</a>
+				@foreach($blog->comment as $comment)
+				<p><b>Nome:</b> {{ $comment->name }}</br/></p>
+				<p><b>Comment:</b> {{ $comment->comment }}</br/></p>
+				@endforeach
 			</div>
-	<?php endforeach; ?>
-	
+		@endforeach
 	</div>
 </div>
  @stop
