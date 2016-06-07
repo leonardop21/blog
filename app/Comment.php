@@ -8,12 +8,12 @@ class Comment extends Model
 {
     protected $fillable = [
     'post_id',
-    'comment',
+    'Comment',
     'name',
     'email'
     ];
 
-    public function comments() {
-    	return $this->hasMany('App\Comment');
+    public function Comments() {
+    	return $this->hasMany('Blog\Comment');
     }
 }

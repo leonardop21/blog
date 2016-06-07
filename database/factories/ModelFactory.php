@@ -25,6 +25,13 @@ $factory->define(Blog\Blog::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->sentence,
         'content' => $faker->paragraph,
-      	'author' => $faker->name,
+        'author' => $faker->name,
+    ];
+});
+
+
+$factory->define(Blog\Tag::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->word
     ];
 });
