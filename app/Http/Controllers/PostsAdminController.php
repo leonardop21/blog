@@ -5,28 +5,30 @@ namespace Blog\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Blog\Http\Requests;
+use Blog\Post;
+use Blog\Blog;
 use Blog\Http\Controllers\Controller;
 
 class PostsAdminController extends Controller
 {
 
 	/**
-	* @var Blog
+	* @var Posts
 
 	*/ 
-	private $post;
+	private $posts;
 
 
-	public function __construct(Post $post)
+	public function __construct(Post $posts)
 	{
-		$this->post = $post;
+		$this->posts = $posts;
 	}
 
 
   	public function index() {
 
-  		$leonan-> $this->post->all();
+  		$posts = $this->posts->all();
 
-  		return view('admin.posts.index', compact('posts'));
+  		return view('admin.postss.index', compact('posts'));
   	}
 }

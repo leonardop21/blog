@@ -41,7 +41,7 @@ class PostsController extends Controller
 
     public function leonan() {
         $leonans = \Blog\leonan::all();
-        return view('leonan.leonan', compact($leonans));
+        return view('leonan.leonan', compact('leonans'));
     }
 
 
