@@ -17,6 +17,7 @@ class PostsController extends Controller
     public function index() {
     	$posts = \Blog\Post::all();
     	return view('posts.index', compact('posts'));
+
     }
 
     public function duda() {
@@ -27,6 +28,7 @@ class PostsController extends Controller
     public function blog() {
     	$blogs = \Blog\Blog::all();
     	return view('posts.blog', compact('blogs'));
+            
     }
 
     public function relaxe() {
@@ -46,3 +48,4 @@ class PostsController extends Controller
 
 
 }
+

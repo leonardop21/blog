@@ -27,8 +27,10 @@ class PostsAdminController extends Controller
 
   	public function index() {
 
-  		$posts = $this->posts->all();
+  		$posts = $this->posts->paginate(5);
 
-  		return view('admin.postss.index', compact('posts'));
+  		return view('admin.posts.index', compact('posts'));
   	}
 }
+
+

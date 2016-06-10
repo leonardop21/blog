@@ -20,3 +20,9 @@ class Blog extends Model
    }
 
 }
+
+class PostsAdmin extends Model
+{
+    protected $table = 'Posts';
+
+}

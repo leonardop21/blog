@@ -11,6 +11,8 @@ class Blog extends Model
    		'content'
    ];
 
+
+
    public function comments(){
    	return $this->hasMany('App\Comment');
    }
