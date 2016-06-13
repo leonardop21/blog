@@ -10,6 +10,7 @@ use Blog\Post;
 use Blog\blog;
 use Blog\relaxe;
 use Blog\animal;
+use Blog\duda;
 use Blog\leonan;
 
 class PostsController extends Controller
@@ -21,7 +22,7 @@ class PostsController extends Controller
     }
 
     public function duda() {
-    	$dudas = \Blog\Duda::all();
+    	 $dudas = \Blog\Duda::all();
     	return view('posts.duda', compact('dudas'));
     }
 

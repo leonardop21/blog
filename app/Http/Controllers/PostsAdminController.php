@@ -2,12 +2,13 @@
 
 namespace Blog\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 
-use Blog\Http\Requests;
+ use Blog\Http\Requests;
+use Illuminate\Http\Request;
 use Blog\Post;
-use Blog\Blog;
-use Blog\Http\Controllers\Controller;
+// use Blog\Blog;
+// use Blog\Http\Controllers\Controller;
 
 class PostsAdminController extends Controller
 {
@@ -27,9 +28,19 @@ class PostsAdminController extends Controller
 
   	public function index() {
 
-  		$posts = $this->posts->paginate(5);
+  		$posts = $this->posts->paginate(10);
 
   		return view('admin.posts.index', compact('posts'));
+  	}
+
+  	public function Create()
+  	{
+  		return view('admin.posts.create');
+  	}
+
+  	public function Store(PostRequest  $request) {
+  		$this->posts->create($request->all());
+  		return redirect()->route('admin.posts.index');
   	}
 }
 

@@ -21,4 +21,6 @@ Route::get('/blog/duda', 'PostsController@duda');
 Route::get('/relaxe','PostsController@relaxe');
 Route::get('/blog/animal','PostsController@animal');
 Route::get('/leonan','PostsController@leonan');
-Route::get('/admin','PostsAdminController@index');
+Route::get('/admin',['as'=>'admin.index', 'uses'=>'PostsAdminController@index']);
+Route::get('/admin/create',['as'=>'admin.create', 'uses'=>'PostsAdminController@create']);
+Route::post('/admin/store',['as'=>'admin.store', 'uses'=>'PostsAdminController@store']);
