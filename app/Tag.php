@@ -3,14 +3,16 @@
 namespace Blog;
 
 use Illuminate\Database\Eloquent\Model;
+use Blog\Tag;
 
 class Tag extends Model
-{
-    protected $fillable = [
+
+{    protected $fillable = [
     	'name'
     ];
+       protected $table = 'tags';
 
     public function blogs() {
-    	return $this0>belongsToMany('App\Blog', 'blogs_tags');
+    	return $this>belongsToMany('App\Blog', 'tags');
     }
 }

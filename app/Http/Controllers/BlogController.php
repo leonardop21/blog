@@ -15,8 +15,9 @@ class Blog extends Model
     return $this->hasMany('App\Comment');
    }
 
-   public function tags() {
-    return $this->belongsToMany('App\Tag', 'blogs_tags');
+   public function tag() {
+
+    return $this->belongsToMany('App\Tag', 'tag');
    }
 
 }

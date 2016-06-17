@@ -15,7 +15,7 @@
 			</ul>
 
 			@endif
-			{!! Form::open(['route'=>'admin.store', 'method'=>'post']) !!}
+			{!! Form::open(['route'=>'admin.posts.store', 'method'=>'post']) !!}
 
 			<div class="form-group">
 				{!! Form::Label('title', 'Título') !!}
@@ -30,6 +30,11 @@
 			<div class="form-group">
 				{!! Form::Label('img', 'Imagem') !!}
 				{!! Form::Text('img', null, ['class'=>'form-control']) !!}
+			</div>
+
+			<div class="form-group">
+				{!! Form::Label('tags', 'Tags') !!}
+				{!! Form::Text('tags', null, ['class'=>'form-control']) !!}
 			</div>
 
 

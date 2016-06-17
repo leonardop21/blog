@@ -1,11 +1,10 @@
 <?php
 
 namespace Blog\Http\Requests;
-
 use Blog\Http\Requests\Request;
 
 
-class PostRequest extends Request
+class PostsRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +24,9 @@ class PostRequest extends Request
     public function rules()
     {
         return [
-        'title'=>'requerid|min:8',
-        'content'=>'requerid:min10',
-        'img'=>'requerid'
+        'title'=>'required|min:8',
+        'content'=>'required:min10',
+        'img'=>'required'
         ];
     }
 }
